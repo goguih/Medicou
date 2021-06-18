@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <div class="container">
+          <h1 class="logo"></h1>
+    
+          <nav>
+            <ul>
+              <li><a href="#">Tela inicial</a></li>
+              <li><a href="#">Consultas Marcadas</a></li>
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="#">Perfil</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <body>
+          <div>
+              <label>Agendamento de consulta</label>
+          </div>
+        <div>
+            <form action="/action_page.php">
+              <label for="fname">Nome</label>
+              <input type="text" id="fname" name="firstname" placeholder="Digite seu nome">
+          
+              <label for="lname">Sobrenome</label>
+              <input type="text" id="lname" name="lastname" placeholder="Digite seu sobrenome">
+          
+              <label for="doctor">Nome do Médico</label>
+              <select id="doctor" name="doctor">
+                <option value="doctor1">Dra. Valesca Oliveira</option>
+                <option value="cdoctor2">Dr. José Roberto Carlos</option>
+                <option value="doctor3">Dra. Silvana Pereira da Silva</option>
+              </select>
+            <label>Escola a melhor data para ser atendido</label>
+              <input id="date" type="date" value="2017-06-01">
+              <p></p>
+              <label for="appt">Qual horário prefere ser atendido?</label>
+
+            <input type="time" id="appt" name="appt"
+                min="09:00" max="18:00" required>
+              <div>
+
+            <label>É sua primeira consulta?</label>
+            <p></p>
+            <input type="checkbox" name="consulta" value="Sim">
+            
+            <label for="consulta">Sim</label><br>
+            <input type="checkbox" name="consulta" value="Nao">
+            <label for="consulta">Não</label><br>
+            </div>
+            <input type="submit" value="Submit">
+            </form>
+          </div>
+          
+
+      </body>
+      <script>
+          var dateControl = document.querySelector('input[type="date"]');
+            dateControl.value = '2020-12-01';
+      </script>
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+        #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+      
+      body {
+          margin: 0;
+          background: rgb(255, 251, 251);
+          font-family: 'Work Sans', sans-serif;
+          font-weight: 800;
+      }
+      
+      .container {
+          width: 80%;
+          margin: 0 auto;
+      }
+      
+      header {
+        background: #44c2d8;
+      }
+      
+      header::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      
+      .logo {
+        float: left;
+        padding: 10px 0;
+      }
+      
+      nav {
+        float: right;
+      }
+      
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      
+      nav li {
+        display: inline-block;
+        margin-left: 70px;
+        padding-top: 23px;
+      
+        position: relative;
+      }
+      
+      nav a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+      
+      nav a:hover {
+        color: rgb(255, 255, 255);
+      }
+      
+      nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background-color: rgb(250, 250, 250);
+      
+        position: absolute;
+        top: 0;
+        width: 0%;
+      
+        transition: all ease-in-out 250ms;
+      }
+      
+      nav a:hover::before {
+        width: 100%;
+      }
+
+
+    input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  
+  padding: 20px;
+} 
+</style>   
+</html>
